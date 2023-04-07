@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
 \usepackage{setspace}
+\usepackage{pdfpages}
 \setcounter{secnumdepth}{1}
 % \usepackage{tocstyle}
 % \usetocstyle{standard}
@@ -221,7 +222,7 @@ Associate Professor of Physics\\[\baselineskip]
 \newpage
 \begin{doublespace}
 \noindent
-The Columbian College of Arts and Sciences of The George Washington University certifies that Sarah I. Chastain has passed the Final Examination for the degree of Doctor of Philosophy as of \texttt{date of defense}. This is the final and approved form of the dissertation.
+The Columbian College of Arts and Sciences of The George Washington University certifies that Sarah I. Chastain has passed the Final Examination for the degree of Doctor of Philosophy as of \texttt{April 6, 2023}. This is the final and approved form of the dissertation.
 \end{doublespace}
 \vspace{12pt}
 \begin{center}
@@ -257,18 +258,18 @@ Dissertation Research Committee:
 
 %only readers and directors are listed per CCAS. No examiners or chairs.
 
-\newpage
-\phantomsection \label{dedication}
-\begin{center}
-\section*{\textbf{Dedication}}
-\end{center}
-\addcontentsline{toc}{section}{\textbf{Dedication}}
-\begin{center}
-\vspace*{6pt}
-%\vspace*{-24pt}
-%Dedication text goes here.
+% % \newpage
+% % \phantomsection \label{dedication}
+% % \begin{center}
+% % \section*{\textbf{Dedication}}
+% % \end{center}
+% % \addcontentsline{toc}{section}{\textbf{Dedication}}
+% % \begin{center}
+% % \vspace*{6pt}
+% % %\vspace*{-24pt}
+% % %Dedication text goes here.
 
-\end{center}
+% \end{center}
 
 \doublespacing
 \newpage
@@ -279,6 +280,11 @@ Dissertation Research Committee:
 \vspace*{6pt}
 \addcontentsline{toc}{section}{\textbf{Acknowledgements}}
 \doublespacing
+This dissertation is based in part on the previously published article, \citet{2022A&C....4000629C}. I have permission from my publishers and co-authors to use the work listed below in my dissertation. Copies of all copyright permissions are in Appendix A of this document. 
+
+
+
+
 This work was made possible through a collaboration with other researchers, many of whom are a part of the ThunderKAT collaboration. The author would like to acknowledge their assistance in making the project possible and refining the content of the thesis itself. 
 
 Additionally, the author would like to thank the individuals who made it possible for her to make it past the first few years of graduate school and to the thesis defense. In particular, Dr. Evie Downie for her advice that helped the author make it through some particularly difficult years. 
@@ -383,11 +389,11 @@ Due to recently built and upgraded facilities in the radio regime, there is a tr
 
 	\begin{figure}
 		\includegraphics[width=\textwidth]{rates.png}
-		\caption{These plots show the limits on the transient rate observed in radio surveys. The plot on the left shows the transient rate surface density for the timescale probed by the survey; the plot on the right shows the transient surface density for the sensitivity of the survey \citep{2017MNRAS.466.1944M}. Various transient searches around 1 GHz have probed a portion of parameter space, but there is much more that can be done. The lines for the various kinds of objects are from \citet{2015ApJ...806..224M}.}
+		\caption{These plots show the limits on the transient rate observed in radio surveys. The plot on the left shows the transient rate surface density for the timescale probed by the survey; the plot on the right shows the transient surface density for the sensitivity of the survey \citep{2017MNRAS.466.1944M}. Various transient searches around 1 GHz have probed a portion of parameter space, but there is much more that can be done. The lines for the various kinds of objects are from \citet{2015ApJ...806..224M}. These objects are magnetars, tidal disruption events (TDE), long gamma-ray burst events, off-axis short gamma-ray burst events, and neutron star mergers resulting in a black hole.}
 		\label{murphy2017}
 	\end{figure}
 
-Figure~\ref{dario_var_lum} \citep{2015MNRAS.446.3687P} shows the kinds of objects that may be variable or transient in the radio regime. The horizontal axis shows the observing frequency multiplied by the pulse width, the latter being a proxy for the transient duration, and the vertical axis shows the spectral luminosity. Overplotted are dotted lines for different brightness temperatures: the brightness temperature is the temperature of a black body with its peak at the observing frequency\footnote{In the Rayleigh-Jeans limit, this can be represented as $I_{\nu}=\frac{2\nu^2}{c^2}kT_b$, where $T_b$ is the brightness temperature, $c$ is the speed of light, $\nu$ is the observing frequency, and $I_{\nu}$ is the intensity at a given observing frequency. See e.g. \citet{1986rpa..book.....R} for more information.}. As can be seen, different types of transients can be grouped together on this plot. On the shortest timescales are astrophysical phenomena such as fast radio bursts (FRBs), extremely short (about ten milliseconds) and bright bursts of radio emission of which the origins are still mysterious and being investigated~\citep{2021ApJS..257...59C}; and pulsars, rapidly rotating neutron stars which emit bright pulses in radio wavelengths. On longer timescales, we see phenomena like gamma-ray bursts (GRBs), mass-accreting supermassive black holes known as active galactic nuclei (AGN), supernovae from exploding stars, and X-ray binaries from stars that interact with a compact object like a black hole or neutron star. 
+Figure~\ref{dario_var_lum} \citep{2015MNRAS.446.3687P} shows the kinds of objects that may be variable or transient in the radio regime. The horizontal axis shows the observing frequency multiplied by the pulse width, the latter being a proxy for the transient duration, and the vertical axis shows the spectral luminosity. Overplotted are dotted lines for different brightness temperatures: the brightness temperature is the temperature of a black body with its peak at the observing frequency\footnote{In the Rayleigh-Jeans limit, this can be represented as $I_{\nu}=\frac{2\nu^2}{c^2}kT_b$, where $T_b$ is the brightness temperature, $c$ is the speed of light, $\nu$ is the observing frequency, and $I_{\nu}$ is the intensity at a given observing frequency. See e.g. \citet{1986rpa..book.....R} for more information.}. As can be seen, different types of transients can be grouped together on this plot. On the shortest timescales are astrophysical phenomena such as fast radio bursts (FRBs), extremely short (about ten milliseconds) and bright bursts of radio emission of which the origins are still mysterious and being investigated~\citep{2021ApJS..257...59C}; and pulsars, rapidly rotating neutron stars which emit bright pulses in radio wavelengths. On longer timescales, we see phenomena like gamma-ray bursts (GRBs), mass-accreting supermassive black holes known as active galactic nuclei (AGN), supernovae from exploding stars, and X-ray binaries from stars that are in orbit with a compact object like a black hole or neutron star. 
 
 	\begin{figure}
 		\begin{center}
@@ -397,7 +403,7 @@ Figure~\ref{dario_var_lum} \citep{2015MNRAS.446.3687P} shows the kinds of object
 		\end{center}
 	\end{figure}
 
-Figure~\ref{dario_var_lum} \citep{2015MNRAS.446.3687P} shows that by observing at various frequencies and time scales, many different kinds of objects can be probed and perhaps some of the gaps can be filled. Furthermore, moving to lower frequencies and/or shorter duration allows for observing more and more different kinds of objects, including observing coherent emission processes. This coherent emission is emission in which the properties of the electromagnetic waves are uniform, usually generated in very small and highly structured environments. At very short timescales, i.e., shorter than about 1 second, it is difficult to make a radio image, and as a result many coherent emission transients are observed using time series analysis in a high time resolution mode. 
+Figure~\ref{dario_var_lum} \citep{2015MNRAS.446.3687P} shows that by observing at various frequencies and time scales, many different kinds of objects can be probed and perhaps some of the gaps can be filled. Furthermore, moving to lower frequencies and/or shorter duration allows for observing a broader diversity of objects, including observing coherent emission processes. This coherent emission is emission in which the properties of the electromagnetic waves are uniform, usually generated in very small and highly structured environments. At very short timescales, i.e., shorter than about 1 second, it is difficult to make a radio image, and as a result many coherent emission transients are observed using time series analysis in a high time resolution mode. 
 
 On longer timescales it is possible to make radio images that are sensitive to the faintest of emission across multiple frequencies. This kind of detail allows for observing and characterizing synchrotron emission. Synchrotron emission is created when electrons are accelerated to relativistic speeds, producing a predictable pattern of emission over time and across the radio frequencies. This kind of emission is possible when powerful outflows and jets interact with their environments, creating shocks. By studying the exact way in which the emission behaves as a function of time and frequency, we can learn many different properties of the exact microphysics within these shocks, the global energetics, and the density and structure of the surrounding material in the environment (or medium).
 
@@ -486,7 +492,7 @@ In addition, the simulations code base contains a configuration file with settin
  \end{figure}
  %%%%%%%%
 \subsubsection{Light Curves}
-In Figure~\ref{multilc} we show the light curves included in the simulations, which are the tophat, fast rise exponential decay (FRED), exponential rise fast decay (Wilma), exponential rise exponential decay (ERED), Gaussian, and parabola. The tophat light curve is defined to have an instantaneous rise to the peak flux, followed at some point in time by an instantaneous decay. This light curve represents the classic case of a transient that turns on and off, and the simplest form of transient light curves. The FRED light curve instantaneously rises to the peak flux and exponentially decays. This light curve is commonly observed in a variety of X-ray and gamma-ray transients. The Wilma is simply the time reversed FRED: it exponentially rises to the peak flux and then instantaneously decays. Including the Wilma light curve is a convenient way to introduce the simplest form of light curve with no definite start or end. The ERED is such a light curve that is formed by putting the previous two together: it exponentially rises to a peak flux and then exponentially decays. The Gaussian is a light curve that has the shape of a Gaussian function with the mean being located at the peak flux and the duration given by the standard deviation. Similar light curves can be seen arising from, for example, binary systems and magnetar bursts.  The parabolic light curve is a concave down parabola that reaches the peak flux at the vertex and the duration being the range of time in which the flux is positive; its inclusion provides an example of a light curve with a definite duration but with a profile that rises and falls below the peak flux in a symmetric way (i.e., one step more complex than the tophat). More details about these light curves, including their mathematical definitions, can be found in the appendix to this chapter.
+In Figure~\ref{multilc} we show the light curves included in the simulations, which are the tophat, fast rise exponential decay (FRED), exponential rise fast decay (Wilma), exponential rise exponential decay (ERED), Gaussian, and parabola. The tophat light curve is defined to have an instantaneous rise to the peak flux, followed at some point in time by an instantaneous decay. This light curve represents the classic case of a transient that turns on and off, and the simplest form of transient light curves. The FRED light curve instantaneously rises to the peak flux and exponentially decays. This light curve is commonly observed in a variety of X-ray and gamma-ray transients. The Wilma is simply the time reversed FRED: it exponentially rises to the peak flux and then instantaneously decays. Including the ERED light curve is a convenient way to introduce the simplest form of light curve with no definite start or end. The ERED is such a light curve that is formed by putting the previous two together: it exponentially rises to a peak flux and then exponentially decays. The Gaussian is a light curve that has the shape of a Gaussian function with the mean being located at the peak flux and the duration given by the standard deviation. Similar light curves can be seen arising from, for example, binary systems and magnetar bursts.  The parabolic light curve is a concave down parabola that reaches the peak flux at the vertex and the duration being the range of time in which the flux is positive; its inclusion provides an example of a light curve with a definite duration but with a profile that rises and falls below the peak flux in a symmetric way (i.e., one step more complex than the tophat). More details about these light curves, including their mathematical definitions, can be found in the appendix to this chapter.
 
 For a given radio survey, the simulated light curve has implications on the part of parameter space that the survey probes. One of the clearest ways to examine these implications is by looking at probability contour plots. Figures~\ref{tophat}-\ref{fred} show the probability contours for example light curves included in the simulations code. The horizontal axis shows the characteristic duration of the transient, which is defined slightly differently for each light curve shape: the tophat and parabolic light curves' characteristic duration is the duration that the transient's flux is non-zero; the characteristic duration for the Gaussian is the standard deviation; and the duration of the FRED, Wilma, and ERED light curves is the e-folding time. The vertical axis shows the characteristic flux, which is the peak flux for all light curves that are currently implemented (but could vary for more exotic light curve shapes). The color legend shows the probability of detecting a source as a transient at a given duration and flux. Note that a source that is detected in every observation would not be a transient. A probability of 1 means that the survey detects every transient source at the particular flux and duration. Note how the region where the transient is always detected changes for the different light curve shapes. The reason for some of these differences is discussed in detail in the Light Curves section.
 
@@ -757,23 +763,38 @@ Here we present and briefly discuss the light curve shapes that are currently in
 \subsubsection{Tophat}
 
 The tophat is the simplest transient light curve in concept:
-\[F=F_{pk}~\text{for}~t_{start} \le t \le t_{end}\]
+\begin{equation}
+F=F_{pk}~\text{for}~t_{start} \le t \le t_{end}
+\end{equation}
 It is simply at the peak flux for the entire duration of the transient. The probability contour plot shown in Figure~\ref{tophat} has a region in parameter space in which all transients are always detected, which can be referred to as a region of guaranteed detection. This region has vertical boundaries that can be found to have a quite straightforward interpretation \citep{2017MNRAS.465.4106C}. The left-most boundary is the longest gap in the observations or, in other words, the longest duration of a tophat transient that could go undetected. The right-most vertical bounding line corresponds to the longest time scale that a transient could have while not being detected as a constant source. This quantity is the duration of the entire survey minus either the first or last observation. 
 
 \subsubsection{Fast Rise Exponential Decay}
 The fast rise exponential decay (FRED) light curve is defined as instantaneously rising to the peak flux and exponentially decaying with an characteristic duration $\tau$, defined as its e-folding time:
-\[F=F_{pk}\,\exp\left[\frac{-(t-t_{start})}{\tau}\right]~\text{for}~t\ge t_{start}\]
+\begin{equation}
+F=F_{pk}\,\exp\left[\frac{-(t-t_{start})}{\tau}\right]~\text{for}~t\ge t_{start}
+\end{equation}
 
 This light curve produces a slightly different probability contour, seen in Figure~\ref{fred}, in which the bounding lines for the region of guaranteed detection can be interpreted as follows. The left boundary corresponds to the boundary due to the longest gap, like the tophat. However, unlike the tophat, the flux of the FRED light curve approaches but never actually reaches zero as time progresses. Therefore, brighter transients can be detected for longer than the characteristic duration of the transient, making this boundary a curve instead of a vertical line. The boundary condition can be expressed as $F_{int}=S_{gap}$, i.e. the integrated flux of the transient needs to be equal to the sensitivity of the observation the transient would be detected in, which would be the observation after the gap. We can find the integrated flux:
-\[F_{int} = F_{pk}\,\tau\,\frac{\exp\left[-\frac{\max(T_{start},t_{start})}{\tau}\right] - \exp\left[\frac{T_{end}}{\tau}\right]}{T_{end}-T_{start}}\]
+\begin{equation}
+   F_{int} = F_{pk}\,\tau\,\frac{\exp\left[-\frac{\max(T_{start},t_{start})}{\tau}\right] - \exp\left[\frac{T_{end}}{\tau}\right]}{T_{end}-T_{start}} 
+\end{equation}
 Since we consider the case where the transient starts in the gap, the start of the observation that detects the transient is equal to the length of time from the start of the transient until the end of the gap, which we label $T_{gap}$: $T_{start}=T_{gap}$. 
 Therefore, $T_{end}=T_{start}+\Delta T_{gap}$, where $\Delta T_{gap}$ is the duration of the observation. Inserting the integrated flux into the previous equation and solving for $F_{pk}$ yields:
-\[F_{pk}(\tau) = \frac{S_{gap}\,\Delta T_{gap}}{\tau\,\left(\exp\left[-\frac{T_{gap}}{\tau}\right] - \exp\left[\frac{(T_{gap} + \Delta T_{gap})}{\tau}\right]\right)}\]
+\begin{equation}
+F_{pk}(\tau) = \frac{S_{gap}\,\Delta T_{gap}}{\tau\,\left(\exp\left[-\frac{T_{gap}}{\tau}\right] - \exp\left[\frac{(T_{gap} + \Delta T_{gap})}{\tau}\right]\right)}
+\end{equation}
 
 The right boundary is the boundary for the longest timescale. We can follow the same procedure as the left boundary, finding that $S_{obs} = S_{last}$, the sensitivity of the last observation in the survey. We also find the following modifications:
-\[T_{start} = \tau_{survey}  - \Delta T_{last}\]
-\[T_{end} = \tau_{survey}\]
-\[F_{pk}(\tau) = \frac{S_{last}\,\Delta T_{last}}{\tau\,\left(\exp\left[-\frac{(\tau_{survey} - \Delta T_{last})}{\tau}\right] - \exp\left[\frac{\tau_{survey}}{\tau}\right]\right)}\]
+\begin{equation}
+T_{start} = \tau_{survey}  - \Delta T_{last}
+\end{equation}
+\begin{equation}
+    T_{end} = \tau_{survey}
+\end{equation}
+\begin{equation}
+    F_{pk}(\tau) = \frac{S_{last}\,\Delta T_{last}}{\tau\,\left(\exp\left[-\frac{(\tau_{survey} - \Delta T_{last})}{\tau}\right] - \exp\left[\frac{\tau_{survey}}{\tau}\right]\right)}
+\end{equation}
+
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{wilma.png}
@@ -783,7 +804,7 @@ The right boundary is the boundary for the longest timescale. We can follow the 
  
 \subsubsection{Exponential Rise Fast Decay (Wilma)}
 In light of the FRED light curve, a natural extension would be to examine the reverse FRED light curve. The light curve ends at the peak flux and has no definite start:
-\[F=F_{pk}\,\exp\left[{\frac{(t-t_{end})}{\tau}}\right]\text{ for }t\le t_{end}\]
+\begin{equation}F=F_{pk}\,\exp\left[{\frac{(t-t_{end})}{\tau}}\right]\text{ for }t\le t_{end}\end{equation}
 The probability contour plot for this light curve is shown in Figure~\ref{wilma}. As one can see, it is identical to the FRED light curve in Figure~\ref{fred}. This makes sense when one realizes that if the entire survey were time-reversed, the light curve would be a FRED. For this reason, the lines bounding the region of guaranteed detection are the same as for the FRED light curve. 
 
 \begin{figure}
@@ -794,49 +815,49 @@ The probability contour plot for this light curve is shown in Figure~\ref{wilma}
  
 \subsubsection{Exponential Rise Exponential Decay}
 The Exponential Rise Exponential Decay (ERED) light curve (Figure~\ref{ered}) does not have a definite beginning nor end, only a characteristic time at which the flux is the peak flux and $\tau$, which is its e-folding time:
-\[F=F_{pk}\,\exp\left[{\frac{(t-t_{char})}{\tau}}\right]\text{ for }t< t_{char}\]
-\[F=F_{pk}\text{ for }t=t_{char}\]
-\[F=F_{pk}\,\exp\left[{\frac{-(t-t_{char})}{\tau}}\right]\text{ for }t> t_{char}\]
+\begin{equation}F=F_{pk}\,\exp\left[{\frac{(t-t_{char})}{\tau}}\right]\text{ for }t< t_{char}\end{equation}
+\begin{equation}F=F_{pk}\text{ for }t=t_{char}\end{equation}
+\begin{equation}F=F_{pk}\,\exp\left[{\frac{-(t-t_{char})}{\tau}}\right]\text{ for }t> t_{char}\end{equation}
 The transients from this light curve also behave similarly to the previous two cases, since this light curve is a Wilma light curve immediately followed by a FRED light curve.  Therefore, if we use the integrated flux to find the curve marking the boundary corresponding to the shortest duration transient that will always be detected, we find:
-\[F_{pk}(\tau) = \frac{ S _{gap}\,\Delta T_{gap}}{\frac{\tau}{2}\,\left(\exp\left[-\frac{T_{gap}}{\tau}\right] - \exp\left[\frac{2\Delta T_{gap} + T_{gap}}{\tau}\right]\right)}\]
+\begin{equation}F_{pk}(\tau) = \frac{ S _{gap}\,\Delta T_{gap}}{\frac{\tau}{2}\,\left(\exp\left[-\frac{T_{gap}}{\tau}\right] - \exp\left[\frac{2\Delta T_{gap} + T_{gap}}{\tau}\right]\right)}\end{equation}
 Similarly, for the flux limit on the longest timescale, we have:
-\[F_{pk}(\tau) = \frac{S_{first/last}\,\Delta T_{first/last}}{\frac{\tau}{2}\,\left(\exp\left[-\frac{\tau_{survey}}{\tau}\right] - \exp\left[-\frac{2\Delta T_{first/last} + \tau_{survey}}{\tau}\right]\right)}\]
+\begin{equation}F_{pk}(\tau) = \frac{S_{first/last}\,\Delta T_{first/last}}{\frac{\tau}{2}\,\left(\exp\left[-\frac{\tau_{survey}}{\tau}\right] - \exp\left[-\frac{2\Delta T_{first/last} + \tau_{survey}}{\tau}\right]\right)}\end{equation}
 In this equation, $S_{first/last}$ and $\Delta T_{first/last}$ would correspond to either the first or last observation in the survey depending on which is more sensitive. 
 
 \subsubsection{Parabola}
 Also included is a parabolic light curve defined as follows:
-\[F = F_{pk}\,\left(1 - \frac{4}{\tau^2}\left(t - \frac{\tau}{2} - t_{crit}\right)^2\right)\]
+\begin{equation}F = F_{pk}\,\left(1 - \frac{4}{\tau^2}\left(t - \frac{\tau}{2} - t_{crit}\right)^2\right)\end{equation}
 $t_{crit}$ is the peak of the light curve, which occurs at half of the duration of the light curve. Since the parabolic light curve starts and ends at zero flux, rather than approaching zero like the exponential or Gaussian light curves, this light curve has a definite duration like the tophat. The light curves with a definite duration all have boundaries in the probability contour plots that are derived in the same way as those for the tophat light curves. The boundaries in the case of the the exponential or Gaussian light curves come about from there being a difference between the characteristic duration and the duration that the transient is actually detected in the observations. 
 \subsubsection{Gaussian}
 The final light curve included is a Gaussian-shaped one:
-\[F=F_{pk}\,\exp\left[\frac{-(t-t_{crit})^2}{2\left(\frac{\tau}{2}\right)^2}\right]\]
+\begin{equation}F=F_{pk}\,\exp\left[\frac{-(t-t_{crit})^2}{2\left(\frac{\tau}{2}\right)^2}\right]\end{equation}
 In order to find the boundaries for the region of parameter space where the transients are always detected, we follow the same process as we did for the FRED light curve, and find an equation for the integrated flux (with erf being the Gauss error function): 
-\begin{equation*}
+\begin{equation}
 \begin{split}
     F_{int} = F_{pk}\,\tau\,\sqrt{\frac{\pi}{8}}\,(\text{erf}\left[\frac{\sqrt{2}(T_{end}-t_{crit})}{\tau}\right]\\
     -\text{erf}\left[\frac{\sqrt{2}(T_{start}-t_{crit})}{\tau}\right])/(T_{end}-T_{start})
 \end{split}
-\end{equation*}
+\end{equation}
 We can define the boundary on the transient flux needed to be detected as $F_{int}=S_{gap}$.
 Using the equation for integrated flux, we find the boundary for the shortest possible duration transient that will always be detected:
 
-\begin{equation*}
+\begin{equation}
 \begin{split}
     F_{pk} = \frac{S_{obs}\,\Delta T_{obs}}{\tau\, \sqrt{\frac{\pi}{8}}}\frac{1}{\text{erf}\left[\frac{-\Delta T_{gap}}{\sqrt{2}\,\tau}\right] - \text{erf}\left[\frac{(-2\Delta T_{obs} - \Delta T_{gap})}{\sqrt{2}\,\tau}\right]}
 \end{split}
-\end{equation*}
+\end{equation}
 
 We also find the boundary on the right, for the longest possible duration transient before it is considered a constant source:
 
-\begin{equation*}
+\begin{equation}
 \begin{split}
     F_{pk} = \frac{S_{obs}\,\Delta T_{obs}}{\tau\, \sqrt{\frac{\pi}{8}}}\frac{1}{\text{erf}\left[\frac{-(\Delta T_{survey} + 2\Delta T_{obs})}{\sqrt{2}\,\tau}\right] - \text{erf}\left[\frac{-\sqrt{2}\,\Delta T_{survey}}{\tau}\right]}
 \end{split}
-\end{equation*}
+\end{equation}
 \newpage
 \section{Commensal Transient Searches in 8 Short Gamma-Ray Burst Fields}
 
-Transient searches at radio wavelengths are now yielding an unprecedented number of transients of all kinds. For some time now, transient searches in other wavebands such as the optical and X-rays have yielded a large number of results, and now this is starting to be true for the radio regime as well. Some searches in time series analysis have found transients like fast radio bursts (FRBs) with timescales on the order of milliseconds~\citep[e.g.,][]{2007Sci...318..777L,2021ApJS..257...59C}. Other searches have been performed in radio images, with the number of transients and variables found this way increasing and yielding interesting results. For example, a transient was found in the LOFAR Multi-frequency Snapshot Survey on a timescale of around 10 minutes at 60 MHz~\citep{2016MNRAS.456.2321S}. The CHILES Variable and Explosive Radio Dynamic Evolution Survey~\citep{2021ApJ...923...31S} spent hundreds of hours observing the COSMOS field at 1.4 GHz and found a number of variable sources at timescales from days to years. There have also been transients found as part of a commensal search, that is, a search of data taken as part of a different scientific objective. In commensal transient searches with MeerKAT at 1.3 GHz,~\citet{2020MNRAS.491..560D} find a transient with a timescale of weeks and a variable pulsar on sub-week timescales; and in this same field,~\citet{2022MNRAS.512.5037D} find variable sources on timescales of weeks to months. Similarly,~\citet{2022MNRAS.517.2894R} found four variable sources with timescales spanning from seconds up to over a year. \citet{2022MNRAS.513.3482A} also found a radio transient source in a commensal search of MeerKAT data. As part of Deeper, Wider, Faster,~\citet{2023MNRAS.519.4684D} have found multiple transients and variables with ASKAP. Additionally, the Variables and Slow Transients survey (VAST) using ASKAP~\citep{2021PASA...38...54M} has found multiple radio transients~\citep{2021ApJ...920...45W,2022MNRAS.516.5972W} and the Very Large Array Sky Survey (VLASS) using the VLA at frequencies around 3 GHz~\citep{2020PASP..132c5001L} promises to find a large number of transients and variables due to their large sky coverage and multi-epoch observing strategies. 
+Transient searches at radio wavelengths are now yielding an unprecedented number of transients of all kinds. For some time now, transient searches in other wavebands such as the optical and X-rays have yielded a large number of results, and now this is starting to be true for the radio regime as well. Some searches in time series analysis have found transients like fast radio bursts (FRBs) with timescales on the order of milliseconds~\citep[e.g.,][]{2007Sci...318..777L,2021ApJS..257...59C}. Other searches have been performed in radio images, with the number of transients and variables found this way increasing and yielding interesting results. For example, a transient was found in the LOFAR Multi-frequency Snapshot Survey on a timescale of around 10 minutes at 60 MHz~\citep{2016MNRAS.456.2321S}. The CHILES Variable and Explosive Radio Dynamic Evolution Survey~\citep{2021ApJ...923...31S} spent hundreds of hours observing the COSMOS field at 1.4 GHz and found a number of variable sources at timescales from days to years. There have also been transients found as part of a commensal search, that is, a search of data taken as part of a different scientific objective. In commensal transient searches with MeerKAT at 1.3 GHz,~\citet{2020MNRAS.491..560D} find a transient with a timescale of weeks and a variable pulsar on sub-week timescales; and in this same field,~\citet{2022MNRAS.512.5037D} find variable sources on timescales of weeks to months. Similarly,~\citet{2022MNRAS.517.2894R} found four variable sources with timescales spanning from seconds up to over a year. \citet{2022MNRAS.513.3482A} also found a radio transient source in a commensal search of MeerKAT data. As part of the Deeper, Wider, Faster,~\citet{2023MNRAS.519.4684D} have found multiple transients and variables with ASKAP. Additionally, the Variables and Slow Transients survey (VAST) using ASKAP~\citep{2021PASA...38...54M} has found multiple radio transients~\citep{2021ApJ...920...45W,2022MNRAS.516.5972W} and the Very Large Array Sky Survey (VLASS) using the VLA at frequencies around 3 GHz~\citep{2020PASP..132c5001L} promises to find a large number of transients and variables due to their large sky coverage and multi-epoch observing strategies. 
 
 Commensal searches for transients and variables is proving to be a valuable way of probing the radio sky, in particular with facilities that have a large field of view. Not only are commensal searches an efficient use of pre-existing scientific data, they also have the potential to find new and interesting sources as well as increasing our knowledge of the populations of sources on the radio sky by constraining transient rates~\citep[e.g.,][]{2011ApJ...728L..14B,2016MNRAS.459.3161C}. The number of detections along with the survey properties, if used in conjunction with accurate transient rate calculations, can uncover more information about sources with unknown associations. In addition, with calculations that allow for calculating different transient rates for different parts of the sky, such as~\citep{2022ascl.soft04007C}, it is possible to reveal differences in transients and their behavior in different parts of the sky, such as galactic versus extragalactic sources. 
 
@@ -848,7 +869,7 @@ We will describe the observations and overall data set in the Observations secti
 
 \subsection{Observations}
 
-We performed a commensal transient search in observations of eight short gamma-ray burst fields. Each observation was about 4 hours in duration including overhead, such as calibrator observations, with the number of observations per field varying. Each 4-hour observation consisted of 15-minute scans with calibrator measurements of a few minutes interspersed. Table~\ref{tab:allobs} lists all the observations that are a part of our transient survey. The observations were calibrated using version 1.1 of the ProcessMeerKAT pipeline~\citep[{\sc ProcessMeerKAT};][]{pminprep}. As part of this calibration process, parts of the spectrum with a large amount of known radio frequency interference (RFI) were flagged, resulting in a bandwidth of about 800 MHz centered at 1.28 GHz. Calibration was performed in parallel by separating the measurement set into 11 spectral windows. The bandpass and complex gain calibration was performed using Common Astronomy Software Applications \citep[{\sc CASA;}][]{2022arXiv221002276T} tools and the calibrators listed in Table~\ref{tab:allobs}. Automated RFI flagging was performed using tfcrop and rflag. After two rounds of calibration and flagging, the spectral windows were recombined into a single measurement set for imaging. 
+We performed a commensal transient search in observations of eight short gamma-ray burst fields originally taken as part of the ThunderKAT project for the purpose of searching for afterglow emission from short gamma-ray bursts. Each observation was about 4 hours in duration including overhead, such as calibrator observations, with the number of observations per field varying. Each 4-hour observation consisted of 15-minute scans with calibrator measurements of a few minutes interspersed. Table~\ref{tab:allobs} lists all the observations that are a part of our transient survey. The observations were calibrated using version 1.1 of the ProcessMeerKAT pipeline~\citep[{\sc ProcessMeerKAT};][]{pminprep}. Observations were taken at L-band, centerted at 1.28 GHz and spanning frequency range from 856 MHz to 1.7 GHz. As part of this calibration process, parts of the spectrum with a large amount of known radio frequency interference (RFI) were flagged including 933 to 960 MHz, 1163 to 1299 MHz, 1524 to 1630 MHz, and 1680 to 1711 MHz. Calibration was performed in parallel by separating the measurement set into 11 spectral windows. The bandpass and complex gain calibration was performed using Common Astronomy Software Applications \citep[{\sc CASA;}][]{2022arXiv221002276T} tools and the calibrators listed in Table~\ref{tab:allobs}. Automated RFI flagging was performed using tfcrop and rflag. After two rounds of calibration and flagging, the spectral windows were recombined into a single measurement set for imaging. 
 
 All images were made using tclean. The 4-hour images were made by producing a shallow image with the cleaning process stopping based on a threshold of 1 mJy; and then self-calibration and flagging for RFI was performed before making the final, deep image stopping at a threshold of around 80 $\mu$Jy. The 15-minute images were made using the self-calibrated measurement set. The imaging parameters used include the multi-term multi-scale imaging algorithm with the w-project gridder. For the 4-hour images, 128 w-planes were used; and for the 15-minute images, 64 w-planes were used. The latter resulted in increased correlated noise in the 15-minute images. 
 
@@ -946,7 +967,14 @@ GRB210919A&	3&	42&	4706\\
 
 \subsubsection{Transient Searches with the LOFAR Transients Pipeline}
 
-After calibrating the data and producing images, the latter were run through the TraP~\citep{2015A&C....11...25S} version 4. While originally designed for LOFAR, the TraP is telescope-agnostic and well suited for any kind of image based radio transient search. When running the images through the pipeline, a detection threshold of 5$\sigma$ was used, which is the threshold for blind detection of a source, along with an analysis threshold of $3\sigma$, which is the threshold used for analyzing information about the source (such as position and flux, and uncertainties in those quantities). The detection threshold was set to 5$\sigma$ instead of the default 8$\sigma$ so that more sources would be detected and analyzed by TraP. We later increase this threshold and reduce the number of candidate transients and variables through additional analysis, as described in section ``Determining Candidate Variables and Transients.'' This process of starting with a lower threshold and increasing it later was beneficial for capturing longer portions of variable light curves since, when a variable source reaches the detection threshold in TraP, the TraP does not go back to previous images to measure the flux of the source before detection. 
+After calibrating the data and producing images, the latter were run through the TraP~\citep{2015A&C....11...25S} version 4. While originally designed for LOFAR, the TraP is telescope-agnostic and well suited for any kind of image based radio transient search. When running the images through the pipeline, a detection threshold of 5$\sigma$ was used, which is the threshold for blind detection of a source, along with an analysis threshold of $3\sigma$, which is the threshold used for analyzing information about the source (such as position and flux, and uncertainties in those quantities). The detection threshold was set to 5$\sigma$ instead of the default 8$\sigma$ so that more sources would be detected and analyzed by TraP. We later increase this threshold and reduce the number of candidate transients and variables through additional analysis, as described in section ``Determining Candidate Variables and Transients.'' This process of starting with a lower threshold and increasing it later was beneficial for capturing longer portions of variable light curves since, when a variable source reaches the detection threshold in TraP, the TraP does not go back to previous images to measure the flux of the source before detection. The TraP calculates variability statistics $V$ and $\eta$, which the user can use to classify a source as constant or varying. These statistics are as defined in \citet{2015A&C....11...25S}:
+\begin{equation}\label{Veqn}
+    V_{\nu} = \frac{1}{\bar{I}_{\nu}}\sqrt{\frac{N}{N-1} (\bar{I_{\nu}^2} - \bar{I_{nu}}^2)}
+\end{equation}
+\begin{equation}\label{etaeqn}
+    \eta =  \frac{1}{N-1} \sum_{i=1}^{N} \frac{(I_{\nu,i} - \xi_{I_{\nu}})^2}{\sigma_{\nu,i}^2}   
+\end{equation}
+In these equations, $\nu$ is the observing frequency, $I$ is the flux measurement, $N$ is the number of observations, $\xi$ is the weighted mean flux density (whose weights are the $1/\sigma_{\nu}^2$), and $\sigma$ is the uncertainty in flux measurement. 
 
 The transient search on the 8-second timescale was limited in time to the images contained within an approximately 15 minute scan in order to improve variability statistics and due to the warping of the coordinates in the images. Furthermore, the beamwidths limit in the TraP parameters was set to 3, which relaxes the hard limits on the association between sources that are spatially separated. After searching each of these 15 minutes for transients, the images containing transients were then re-imaged using w-projection, and then compared with the previous images to acquire a corrected position. The number of images for each field is shown in Table~\ref{tab:obstimescales}. Initial runs used 10 deblending thresholds, which is intended to separate sources that are very close together into separate sources; however, due to errors involving source identification and the database within TraP in which an extremely large number of sources were located at the same coordinates in the images, later runs used zero deblending thresholds. This change does not affect any potential transient or variable sources, since these sources would have been clustered close together and discarded in the next step when we restrict the number of sources within 5 times the major axis of the beam (see below).
 
@@ -958,23 +986,23 @@ The output from TraP contains a large number of sources, many of which are not a
 One challenge of performing transient searches is deciding on the appropriate signal-to-noise cut for a source detection. For this study we adopt the methodology used in~\citet{2022MNRAS.517.2894R}: we fit the flux values of all the pixels in the images to a Gaussian, to determine the sigma threshold that would result in less than one false positive. In the case of the 15-minute and 8-second images, we use a sub-set of the images as a sample, 50\% and 2.5\% of the images, respectively. These sample sizes were constrained by the size of memory of the machine used to compute the threshold. In order to scale up the calculated thresholds to account for the images that were not selected, we used a scaling factor to scale up to the number of pixels that would be in the entire dataset. We then used the quantile function of the Gaussian distribution to determine the sigma threshold that would result in less than one false positive. We did this for all fields combined together but for every timescale separately, and found that the thresholds are approximately 5.3$\sigma$, 5.7$\sigma$, and 6.4$\sigma$ for the 4-hour, 15-minute, and 8-second images respectively. We then reduced the number of potentially interesting sources to investigate by making cuts based on these sigma thresholds, excluded regions, and proximity to neighboring sources.
 \begin{figure}
 	\includegraphics[width=0.9\textwidth]{4_Hour_Variability_Metrics.png}
-	\caption{Variability statistics $V$ and $\eta$, as defined in ~\citet{2015A&C....11...25S}, for the 4-hour timescale, also versus the maximum and average integrated flux. A black vertical line marks $\eta=2$.}
+	\caption{Variability statistics $V$ and $\eta$, as defined in equations~\ref{Veqn} and~\ref{etaeqn}, for the 4-hour timescale, also versus the maximum and average integrated flux. A black vertical line marks $\eta=2$.}
 	\label{fig:varstat4hr}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=0.9\textwidth]{15_Minute_Variability_Metrics.png}
-	\caption{Variability statistics $V$ and $\eta$, as defined in ~\citet{2015A&C....11...25S}, for the 15-minute timescale, also versus the maximum and average integrated flux. A black vertical line marks $\eta=2$.}
+	\caption{Variability statistics $V$ and $\eta$, as defined in equations~\ref{Veqn} and~\ref{etaeqn}, for the 15-minute timescale, also versus the maximum and average integrated flux. A black vertical line marks $\eta=2$.}
 	\label{fig:varstat15min}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=0.9\textwidth]{8_Second_Variability_Metrics.png}
-	\caption{Variability statistics $V$ and $\eta$, as defined in ~\citet{2015A&C....11...25S}, for the 8-second timescale, also versus the maximum and average integrated flux. A black vertical line marks $\eta=2$.}
+	\caption{Variability statistics $V$ and $\eta$, as defined in equations~\ref{Veqn} and~\ref{etaeqn}, for the 8-second timescale, also versus the maximum and average integrated flux. A black vertical line marks $\eta=2$.}
 	\label{fig:varstat8sec}
 \end{figure}
 
-After removing potential transients that fall below the signal-to-noise thresholds determined above, in order to determine which sources are potentially variable or transient, we recalculate the variability statistic $\eta$ accounting for a $10\%$ systematic error, since the value that the TraP calculates for $\eta$ does not include systematic errors that can arise due to instrumental effects and/or calibration errors. We then create animations to examine all sources with a corrected $\eta$ above a value of 2. This value was chosen for practicality reasons, since it represents a value of $\eta$ that indicates significant variability and results in a number of sources that could be practically examined in a non-automated way. This resulted in 214 sources in the 8-second images, 306 sources in the 15-minute images, and 278 sources in the 4-hour images. The images of the sources over time were turned into the aforementioned animations with light curves and variability parameters plotted\footnote{Code available at https://github.com/dentalfloss1/sharedscripts as FindOutliers.py}. Using these animations along with light curves, the sources were sorted by eye into one of the following categories: potentially interesting astrophysical transients, obvious noise artifacts, misassociation errors, and moving objects. The moving objects were only found on the 8-second timescale and are most likely due to RFI, due to the narrow-band behavior of the few sources bright enough for spectral analysis. The objects classified as noise artifacts were mostly from large noise patterns across the field that were mistakenly detected as sources. The misassociation issues came from a number of sources, but most of them due to sidelobes around bright sources. 
+After removing potential transients that fall below the signal-to-noise thresholds determined above, in order to determine which sources are potentially variable or transient, we recalculate the variability statistic $\eta$ accounting for a $10\%$ systematic error in flux in the uncertainty, $\sigma$, shown in equation~\ref{etaeqn}, since the value that the TraP calculates for $\eta$ does not include systematic errors that can arise due to instrumental effects and/or calibration errors. We then create animations to examine all sources with a corrected $\eta$ above a value of 2. This value was chosen for practicality reasons, since it represents a value of $\eta$ that indicates significant variability and results in a number of sources that could be practically examined in a non-automated way. This resulted in 214 sources in the 8-second images, 306 sources in the 15-minute images, and 278 sources in the 4-hour images. The images of the sources over time were turned into the aforementioned animations with light curves and variability parameters plotted\footnote{Code available at https://github.com/dentalfloss1/sharedscripts as FindOutliers.py}. Using these animations along with light curves, the sources were sorted by eye into one of the following categories: potentially interesting astrophysical transients, obvious noise artifacts, misassociation errors, and moving objects. The moving objects were only found on the 8-second timescale and are most likely due to RFI, due to the narrow-band behavior of the few sources bright enough for spectral analysis. The objects classified as noise artifacts were mostly from large noise patterns across the field that were mistakenly detected as sources. The misassociation issues came from a number of sources, but most of them due to sidelobes around bright sources. 
 
 
 \subsection{Results}
@@ -1848,14 +1876,15 @@ Even though the transient rate simulations presented in Chapter~2 are much more 
 \appendix
 
 
-%\section{Appendix}\label{appendixlabel}
-%Figure \ref{fig:snr_pipeline} is an example figure.
-%\begin{figure}[htb!]
+\section{Appendix: Publication Agreement}\label{appendixlabel}
+\includepdf[pages={1-},scale=0.75]{elsevierpubagree.pdf}
+% Figure \ref{fig:snr_pipeline} is an example figure.
+% \begin{figure}[htb!]
 %    \centering
 %    \includegraphics[width=\textwidth]{SNR_pipeline.png}
 %    \caption{Example figure}
 %    \label{fig:snr_pipeline}
-%\end{figure}
+% \end{figure}
 
 
 \end{document}
