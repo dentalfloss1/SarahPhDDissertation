@@ -3,6 +3,7 @@
 
 \usepackage{amsmath}
 \usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+ % \geometry{ papersize={8.5in,11in} }
 \usepackage{setspace}
 \usepackage{pdfpages}
 \setcounter{secnumdepth}{1}
@@ -14,6 +15,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftloftitlefont{\normalsize\bfseries}
 \renewcommand\cftlottitlefont{\normalsize\bfseries}
+% \addtocontents{toc}{\vspace{\normalbaselineskip}}
 \usepackage{sectsty}
 \sectionfont{\normalsize}
 \usepackage{enumitem}
@@ -196,20 +198,20 @@ citecolor=blue,urlcolor=blue,linkcolor=blue,pdfpagemode=UseOutlines]{hyperref}
 
 \begin{document}
 \thispagestyle{empty}
-\vspace*{1in}
+\vspace*{45pt}
 \begin{center}
 \center{Characterizing the Radio Transient Sky\vspace*{36pt}}
-\center{Sarah I. Chastain\vspace*{36pt}}
+\center{Sarah I. Chastain\vspace*{48pt}}
 \centerline{M.S. in Physics, May 2021, George Washington University}
 \centerline{B.S. in Physics, May 2017, University of Memphis}\vspace*{24pt}
 \center{A Dissertation submitted to\vspace*{36pt}}
 \begin{center}
 The Faculty of\\The Columbian College of Arts and Sciences \\ of The George
 Washington University\\ in partial fulfillment of the requirements\\ for the degree
-of Doctor of Philosophy\\[36pt]
+of Doctor of Philosophy\\[36pt]\vspace*{12pt}
 May 21, 2023\\[36pt] %date of degree conferral 
 Dissertation directed by\\[\baselineskip]
-Dr. Alexander J. van der Horst\\
+Alexander J. van der Horst\\
 Associate Professor of Physics\\[\baselineskip]
 %Name of Co-director\\
 %Position
@@ -224,37 +226,38 @@ Associate Professor of Physics\\[\baselineskip]
 \noindent
 The Columbian College of Arts and Sciences of The George Washington University certifies that Sarah I. Chastain has passed the Final Examination for the degree of Doctor of Philosophy as of \texttt{April 6, 2023}. This is the final and approved form of the dissertation.
 \end{doublespace}
-\vspace{12pt}
+\vspace*{24pt}
 \begin{center}
 Characterizing the Radio Transient Sky
 
 \vspace*{36pt}
 Sarah I. Chastain
-\vspace{24pt}
+\vspace*{36pt}
 \end{center}
 Dissertation Research Committee:
 \vspace{12pt}
 
-\indent Dr. Alexander J. van der Horst, Associate Professor of Physics, Dissertation Director
+\indent Alexander J. van der Horst, Associate Professor of Physics, Dissertation Director
 \vspace{12pt}
 
 %\indent Name of Co-director, Position, Dissertation Co-Director
 %\vspace{12pt}
 
-\indent Dr. Oleg Kargaltsev, Associate Professor of Physics, Committee Member
+\indent Oleg Kargaltsev, Associate Professor of Physics, Committee Member
 \vspace{12pt}
 
-\indent Dr. Bethany Cobb Kung, Associate Professor of Honors and Physics, Committee Member
+\indent Bethany Cobb Kung, Associate Professor of Honors and Physics, Committee 
+\indent Member
 \vspace{24pt}
 
-\noindent Examiners:
+% \noindent Examiners:
 
-\vspace{12pt}
-\indent Dr. Michael D\"oring, Associate Professor of Physics
+% \vspace{12pt}
+% \indent Michael D\"oring, Associate Professor of Physics
 
-\vspace{12pt}
+% \vspace{12pt}
 
-\indent Dr. Sarah Burke-Spolaor, Assistant Professor of Physics and Astronomy, West Virginia University
+% \indent Sarah Burke-Spolaor, Assistant Professor of Physics and Astronomy, West Virginia University
 
 %only readers and directors are listed per CCAS. No examiners or chairs.
 
@@ -280,10 +283,7 @@ Dissertation Research Committee:
 \vspace*{6pt}
 \addcontentsline{toc}{section}{\textbf{Acknowledgements}}
 \doublespacing
-This dissertation is based in part on the previously published article, \citet{2022A&C....4000629C}. I have permission from my publishers and co-authors to use the work listed below in my dissertation. Copies of all copyright permissions are in Appendix A of this document. 
-
-
-
+This dissertation is based in part (Chapter 2) on the previously published article, \citet{2022A&C....4000629C}. I have permission from my publishers and co-authors to use the work listed below in my dissertation. 
 
 This work was made possible through a collaboration with other researchers, many of whom are a part of the ThunderKAT collaboration. The author would like to acknowledge their assistance in making the project possible and refining the content of the thesis itself. 
 
@@ -314,7 +314,10 @@ Since the beginning of history, humans have looked up to the sky for possible ch
 %\iffalse
 \phantomsection \label{listoffig}
 \begin{center}
+% \addcontentsline{lof}{section}{\vspace*{24pt}}
+% \cftaddtitleline{lof}{section}{\vspace*{12pt}}{}
 \addcontentsline{toc}{section}{\textbf{List of Figures}}
+
 \listoffigures
 \end{center}
 \newpage
@@ -324,7 +327,11 @@ Since the beginning of history, humans have looked up to the sky for possible ch
 \cleardoublepage
 \phantomsection \label{listoftab}
 \begin{center}
+% \addcontentsline{toc}{section}{\vskip24pt}
+% \cftaddtitleline{lot}{section}{\vspace*{12pt}}{}
 \addcontentsline{toc}{section}{\textbf{List of Tables}}
+% \vskip12pt
+
 \listoftables
 \end{center}
 \newpage
@@ -389,7 +396,7 @@ Due to recently built and upgraded facilities in the radio regime, there is a tr
 
 	\begin{figure}
 		\includegraphics[width=\textwidth]{rates.png}
-		\caption{These plots show the limits on the transient rate observed in radio surveys. The plot on the left shows the transient rate surface density for the timescale probed by the survey; the plot on the right shows the transient surface density for the sensitivity of the survey \citep{2017MNRAS.466.1944M}. Various transient searches around 1 GHz have probed a portion of parameter space, but there is much more that can be done. The lines for the various kinds of objects are from \citet{2015ApJ...806..224M}. These objects are magnetars, tidal disruption events (TDE), long gamma-ray burst events, off-axis short gamma-ray burst events, and neutron star mergers resulting in a black hole.}
+		\caption{These plots show the limits on the transient rate observed in radio surveys. The plot on the left shows the transient rate surface density for the timescale probed by the survey; the plot on the right shows the transient surface density for the sensitivity of the survey \citep{2017MNRAS.466.1944M}. Various transient searches around 1 GHz have probed a portion of parameter space, but there is much more that can be done. The lines for the various kinds of objects are from \citet{2015ApJ...806..224M}. These objects are magnetars, tidal disruption events (TDE), long gamma-ray burst events (LGRB), off-axis short gamma-ray burst events (SGRB), and neutron star mergers resulting in a black hole (NSM).}
 		\label{murphy2017}
 	\end{figure}
 
@@ -669,9 +676,9 @@ For a comparison of different survey cadences, one example survey shown in Table
 \label{multirgnprob}
  \end{figure}
 
+\clearpage
 
-
-
+\begin{landscape}
 \begin{deluxetable}{|c|c|c|c|c|c|c|}
 	\tablecolumns{7}
 	\tablewidth{0pc}
@@ -703,10 +710,11 @@ For a comparison of different survey cadences, one example survey shown in Table
 		275.0913  & 7.5926 & 0\&1\&2 & 3.4360 & 308.16 & 59011.70 & 58703.53 \\
 		\enddata
 	\end{deluxetable}
+\end{landscape}
+% \geometry{ papersize={8.5in,11in} }
 
-
-
-
+\clearpage
+\doublespacing
 \subsection{Performance}\label{performance}
 Figure~\ref{fig10} shows how the simulations scale in execution time as a function of the number of sources simulated, for the example of 46 observations of 13 minutes with all observations have an identical field-of-view. Figure~\ref{fig11} shows scaling in execution time as a function of the number of observations when the number of sources is held constant at $4.3\times10^{5}$.  All of the simulations for this example were performed on a 2020 Apple Macbook Pro 13 inch model with the M1 chip. In addition to showing the total execution time, key portions of the code are shown as well. The conditionals and flux filtering steps take place when the algorithm is determining if the sources are detected in observations. These steps are so-named because they filter sources based on the calculated integrated flux, and do a large number of boolean and bit operations to calculate and store each transient's state as either detected or not-detected. The stats step is the step that aggregates the detections into probabilities. Finally, the plotting step is where all of the detection statistics, observation information, and false detection information is plotted. Since the data is broken down into a grid in order to plot, the plotting step has no scaling with the number of sources, so it takes a constant amount of time. 
 
@@ -881,51 +889,69 @@ The shortest imaging timescale of the data is determined by the integration time
 The typical noise values roughly follow the expected scaling for noise as a function of observation time $t$, that is $~1/\sqrt(t)$, and are summarized in Table~\ref{tab:noisesummary} below. As the timescales go shorter, the trend is for the variance in the noise values to go larger, with the images on the 8-second timescale showing a large range of values. 31 out of the 47,964 images at the 8-second timescale had a noise that was many orders of magnitude higher than the typical noise distribution, skewing the statistics in a way that is possibly misleading, and therefore we exclude these highest 31 values for noise on this timescale. In the actual analysis we did not perform any additional quality control steps in the version of TraP we used. 
 
 
-\newgeometry{margin=0.25cm} % modify this if you need even more space
+\newgeometry{margin=1.25in} % modify this if you need even more space
 \begin{landscape}
-
-\begin{deluxetable}{lllllll}
-	\tablecolumns{7}
+\begin{deluxetable}{lllll}	\tablecolumns{5}
 	\tablewidth{0pc}
-	\tablecaption{All observations used in this study, indicating the observations' start and end times, phase center position, time spent on the target, and calibrators used.
+	\tablecaption{All observations used in this study, indicating the observations' start and end times, phase center position, and time spent on the target.
 		\label{tab:allobs}}
-	\tablehead{\colhead{Name}  &    \colhead{Observation Time }&         \colhead{RA } &        \colhead{DEC} &  \colhead{Time On Target (hrs) } & \colhead{Bandpass Calibrator} & \colhead{Gain Calibrator}}
+	\tablehead{\colhead{Name}  &    \colhead{Observation Time }&         \colhead{RA } &        \colhead{DEC} &  \colhead{Time On Target (hrs) } }
 	\startdata
-	GRB 200219A &  2020-02-19T14:13:47 to 18:16:47 & 342.6385 & -59.1196 &              2.6189 & J0408-6545 & J2329-4730 \\
-	GRB 200219A &  2020-02-21T12:28:44 to 16:28:44 & 342.6385 & -59.1196 &              3.2031 & J0408-6545 & J2329-4730 \\
-	GRB 200219A &  2020-02-23T12:07:21 to 16:07:21 & 342.6385 & -59.1196 &              3.1986 & J0408-6545 & J2329-4730 \\
-	GRB 200219A &  2020-02-27T13:52:43 to 17:51:43 & 342.6385 & -59.1196 &              3.1986 & J0408-6545 & J2329-4730 \\
-	GRB 200411A &  2020-04-12T07:07:12 to 11:09:12 &  47.6641 & -52.3176 &              3.2053 & J0408-6545 & J0210-5101 \\
-	GRB 200411A &  2020-04-14T11:31:27 to 15:32:27 &  47.6641 & -52.3176 &              3.2031 & J0408-6545 & J0210-5101 \\
-	Sculptor & 2020-04-16T05:15:42 to 09:17:42 &  11.8875 & -25.2886 &              3.2031 & J1939-6342 & J0025-2602 \\
-	GRB 200411A & 2020-04-18T07:27:35 to 11:29:35 &  47.6641 & -52.3176 &              3.2009 & J0408-6545 & J0210-5101 \\
-	GRB 200522A & 2020-05-23T06:56:37 to 11:10:37 &   5.6820 &  -0.2832 &              3.4496 & J1939-6342 & J0022+0014 \\
-	GRB 200522A & 2020-05-24T06:01:09 to 10:15:09 &   5.6820 &  -0.2832 &              3.4496 & J1939-6342 & J0022+0014 \\
-	GRB 200522A & 2020-05-29T02:11:13 to 06:24:13 &   5.6820 &  -0.2832 &              3.4452 & J1939-6342 & J0022+0014 \\
-	GRB 200522A & 2020-06-06T02:01:14 to 06:15:44 &   5.6820 &  -0.2832 &              3.4474 & J1939-6342 & J0022+0014 \\
-	GRB 200907B & 2020-09-08T01:03:47 to 05:23:17 &  89.0290 &   6.9062 &              3.4430 & J0408-6545 & J0521+1638 \\
-	GRB 200907B & 2020-09-10T01:47:12 to 06:05:42 &  89.0290 &   6.9062 &              3.4541 & J0408-6545 & J0521+1638 \\
-	GRB 200907B & 2020-09-14T01:35:52 to 05:54:16 &  89.0290 &   6.9062 &              3.4585 & J0408-6545 & J0521+1638 \\
-	GRB 200907B & 2020-09-25T02:17:12 to 06:34:54 &  89.0290 &   6.9062 &              3.4563 & J0408-6545 & J0521+1638 \\
-	GRB 210323A & 2021-03-25T06:17:56 to 10:37:26 & 317.9461 &  25.3699 &              3.4519 & J1939-6342 & J2236+2828 \\
-	GRB 210323A & 2021-03-27T06:03:55 to 10:23:16 & 317.9461 &  25.3699 &              3.4519 & J1939-6342 & J2236+2828 \\
-	GRB 210323A & 2021-04-01T05:37:48 to 09:57:17 & 317.9461 &  25.3699 &              3.4563 & J1939-6342 & J2236+2828 \\
-	GRB 210726A & 2021-07-28T14:24:49 to 17:50:28 & 193.2909 &  19.1875 &              2.7122 & J1331+3030 & J1330+2509 \\
-	GRB 210726A & 2021-08-01T12:28:16 to 16:47:14 & 193.2909 &  19.1875 &              3.4519 & J1331+3030 & J1330+2509 \\
-	GRB 210726A & 2021-08-07T12:07:14 to 16:26:20 & 193.2909 &  19.1875 &              3.4519 & J1331+3030 & J1330+2509 \\
-	GRB 210726A & 2021-08-19T12:18:07 to 16:36:33 & 193.2909 &  19.1875 &              3.4519 & J1331+3030 & J1330+2509 \\
-	GRB 210726A & 2021-09-06T11:38:11 to 15:56:29 & 193.2909 &  19.1875 &              3.4496 & J1331+3030 & J1330+2509 \\
-	GRB 210919A & 2021-09-20T01:22:10 to 05:40:20 &  80.2545 &   1.3115 &              3.4519 & J0408-6545 & J0503+0203 \\
-	GRB 210919A & 2021-09-24T02:49:58 to 07:08:40 &  80.2545 &   1.3115 &              3.4541 & J0408-6545 & J0503+0203 \\
-	GRB 210726A & 2021-09-26T09:35:20 to 13:54:18 & 193.2909 &  19.1875 &              3.4563 & J1331+3030 & J1330+2509 \\
-	GRB 210919A & 2021-09-27T01:23:09 to 05:41:27 &  80.2545 &   1.3115 &              3.4541 & J0408-6545 & J0503+0203 \\
-	GRB 210323A & 2021-09-30T17:35:55 to 21:56:06 & 317.9461 &  25.3699 &              3.4541 & J1939-6342 & J2236+2828 \\
-	GRB 210726A & 2021-12-27T02:48:11 to 07:07:17 & 193.2909 &  19.1875 &              3.4430 & J1331+3030 & J1330+2509 \\
+	GRB 200219A &  2020-02-21T12:28:44 to 16:28:44 & 342.6385 & -59.1196 &              3.2031  \\
+	GRB 200219A &  2020-02-23T12:07:21 to 16:07:21 & 342.6385 & -59.1196 &              3.1986  \\
+	GRB 200219A &  2020-02-27T13:52:43 to 17:51:43 & 342.6385 & -59.1196 &              3.1986  \\
+	GRB 200411A &  2020-04-12T07:07:12 to 11:09:12 &  47.6641 & -52.3176 &              3.2053  \\
+	GRB 200411A &  2020-04-14T11:31:27 to 15:32:27 &  47.6641 & -52.3176 &              3.2031  \\
+	Sculptor & 2020-04-16T05:15:42 to 09:17:42 &  11.8875 & -25.2886 &              3.2031  \\ 
+	GRB 200411A & 2020-04-18T07:27:35 to 11:29:35 &  47.6641 & -52.3176 &              3.2009 \\
+	GRB 200522A & 2020-05-23T06:56:37 to 11:10:37 &   5.6820 &  -0.2832 &              3.4496 \\
+	GRB 200522A & 2020-05-24T06:01:09 to 10:15:09 &   5.6820 &  -0.2832 &              3.4496 \\
+	GRB 200522A & 2020-05-29T02:11:13 to 06:24:13 &   5.6820 &  -0.2832 &              3.4452 \\
+	GRB 200522A & 2020-06-06T02:01:14 to 06:15:44 &   5.6820 &  -0.2832 &              3.4474 \\
+	GRB 200907B & 2020-09-08T01:03:47 to 05:23:17 &  89.0290 &   6.9062 &              3.4430 \\
+	GRB 200907B & 2020-09-10T01:47:12 to 06:05:42 &  89.0290 &   6.9062 &              3.4541 \\
+	GRB 200907B & 2020-09-14T01:35:52 to 05:54:16 &  89.0290 &   6.9062 &              3.4585 \\
+	GRB 200907B & 2020-09-25T02:17:12 to 06:34:54 &  89.0290 &   6.9062 &              3.4563 \\
+	GRB 210323A & 2021-03-25T06:17:56 to 10:37:26 & 317.9461 &  25.3699 &              3.4519 \\
+	GRB 210323A & 2021-03-27T06:03:55 to 10:23:16 & 317.9461 &  25.3699 &              3.4519 \\
+	GRB 210323A & 2021-04-01T05:37:48 to 09:57:17 & 317.9461 &  25.3699 &              3.4563 \\
+	GRB 210726A & 2021-07-28T14:24:49 to 17:50:28 & 193.2909 &  19.1875 &              2.7122 \\
+	GRB 210726A & 2021-08-01T12:28:16 to 16:47:14 & 193.2909 &  19.1875 &              3.4519 \\
+	GRB 210726A & 2021-08-07T12:07:14 to 16:26:20 & 193.2909 &  19.1875 &              3.4519 \\
+	GRB 210726A & 2021-08-19T12:18:07 to 16:36:33 & 193.2909 &  19.1875 &              3.4519 \\
+	GRB 210726A & 2021-09-06T11:38:11 to 15:56:29 & 193.2909 &  19.1875 &              3.4496 \\
+	GRB 210919A & 2021-09-20T01:22:10 to 05:40:20 &  80.2545 &   1.3115 &              3.4519 \\
+	GRB 210919A & 2021-09-24T02:49:58 to 07:08:40 &  80.2545 &   1.3115 &              3.4541 \\
+	GRB 210726A & 2021-09-26T09:35:20 to 13:54:18 & 193.2909 &  19.1875 &              3.4563 \\
+	GRB 210919A & 2021-09-27T01:23:09 to 05:41:27 &  80.2545 &   1.3115 &              3.4541 \\
+	GRB 210323A & 2021-09-30T17:35:55 to 21:56:06 & 317.9461 &  25.3699 &              3.4541 \\
+	GRB 210726A & 2021-12-27T02:48:11 to 07:07:17 & 193.2909 &  19.1875 &              3.4430 \\
+	GRB 210726A & 2021-09-26T09:35:20 to 13:54:18 & 193.2909 &  19.1875 &              3.4563  \\
+	GRB 210919A & 2021-09-27T01:23:09 to 05:41:27 &  80.2545 &   1.3115 &              3.4541\\
+	GRB 210323A & 2021-09-30T17:35:55 to 21:56:06 & 317.9461 &  25.3699 &              3.4541 \\
+	GRB 210726A & 2021-12-27T02:48:11 to 07:07:17 & 193.2909 &  19.1875 &              3.4430 \\
+	\enddata
+\end{deluxetable}
+\end{landscape}
+\begin{deluxetable}{lll}	\tablecolumns{3}
+	\tablewidth{0pc}
+	\tablecaption{Calibrators used for each field in this study.
+		\label{tab:allobscals}}
+	\tablehead{\colhead{Name}  & \colhead{Bandpass Calibrator} & \colhead{Gain Calibrator}}
+	\startdata
+	GRB 200219A & J0408-6545 & J2329-4730 \\
+	GRB 200411A & J0408-6545 & J0210-5101 \\
+	Sculptor & J1939-6342 & J0025-2602 \\
+	GRB 200411A  & J0408-6545 & J0210-5101 \\
+	GRB 200522A  & J1939-6342 & J0022+0014 \\
+	GRB 200907B  & J0408-6545 & J0521+1638 \\
+	GRB 210323A  & J1939-6342 & J2236+2828 \\
+	GRB 210726A  & J1331+3030 & J1330+2509 \\
+	GRB 210919A  & J0408-6545 & J0503+0203 \\
 	\enddata
 \end{deluxetable}
 
-
-\end{landscape}
+\clearpage
 \restoregeometry
  \doublespacing
 \begin{deluxetable}{llll}
@@ -974,7 +1000,7 @@ After calibrating the data and producing images, the latter were run through the
 \begin{equation}\label{etaeqn}
     \eta =  \frac{1}{N-1} \sum_{i=1}^{N} \frac{(I_{\nu,i} - \xi_{I_{\nu}})^2}{\sigma_{\nu,i}^2}   
 \end{equation}
-In these equations, $\nu$ is the observing frequency, $I$ is the flux measurement, $N$ is the number of observations, $\xi$ is the weighted mean flux density (whose weights are the $1/\sigma_{\nu}^2$), and $\sigma$ is the uncertainty in flux measurement. 
+In these equations, $\nu$ is the observing frequency, $I$ is the flux measurement, $N$ is the number of observations, $\xi$ is the weighted mean flux density (whose weights are the $1/\sigma_{\nu}^2$), $\sigma$ is the uncertainty in flux measurement, and the bar over a quantity indicates an average. 
 
 The transient search on the 8-second timescale was limited in time to the images contained within an approximately 15 minute scan in order to improve variability statistics and due to the warping of the coordinates in the images. Furthermore, the beamwidths limit in the TraP parameters was set to 3, which relaxes the hard limits on the association between sources that are spatially separated. After searching each of these 15 minutes for transients, the images containing transients were then re-imaged using w-projection, and then compared with the previous images to acquire a corrected position. The number of images for each field is shown in Table~\ref{tab:obstimescales}. Initial runs used 10 deblending thresholds, which is intended to separate sources that are very close together into separate sources; however, due to errors involving source identification and the database within TraP in which an extremely large number of sources were located at the same coordinates in the images, later runs used zero deblending thresholds. This change does not affect any potential transient or variable sources, since these sources would have been clustered close together and discarded in the next step when we restrict the number of sources within 5 times the major axis of the beam (see below).
 
@@ -1095,7 +1121,7 @@ Although there were no confidently detected transients, there remain a large num
 Interstellar scintillation is a known cause of variability in the radio sky. \citet{1998MNRAS.294..307W} provides some background on the kinds of variability expected from radio observations. Scintillation can occur when light at radio wavelengths interacts with inhomogeneities in the ionized component of the interstellar medium. The scattering produced by this interaction can be described as being either ``weak'' or ``strong.'' The dividing line between these regimes can be determined by comparing the observing frequency with the transition frequency $\nu_0$. When the observing frequency is approximately $\nu_0$, the modulation index, defined as $\sigma/\mu$ or the fractional variation in flux where $\mu$ is the average flux and $\sigma$ is the variation in flux, is equal to one. If the observing frequency is greater than the transition frequency, the observations are in the weak scattering regime, and if it is less than the transition frequency, the observations are in the strong scattering regime. Given the observing frequency of 1.3~GHz and typical $\nu_0$ values shown in Table~\ref{tab:sciprop}, all the observations in this survey are in the strong scattering regime. The strong scattering regime can be further broken down into refractive and diffractive scintillation. For all the timescales involved in these variable sources we are interested in examining refractive scintillation. ~\citet{2019arXiv190708395H} created models of refractive scintillation using $H_{\alpha}$ maps. Using these models and relations, we find that we expect scintillation to have a large effect on the amount and kinds of variability to expect in the light curves of individual sources. 
 
 
-\newgeometry{margin=0.25cm} % modify this if you need even more space
+\newgeometry{margin=1.25in} % modify this if you need even more space
 \begin{landscape}
 	\begin{deluxetable}{lllllllll}
 		\tablecolumns{9}
@@ -1129,16 +1155,16 @@ Of the fourteen variable sources in the GRB 200907B field, two have variability 
 	\caption{Scatter plot of a variety of transients observable in radio as a function of variability timescale and luminosity, adapted from~\citet{2015MNRAS.446.3687P}. Overplotted with pink squares are the values for source 715880 at both 10 kpc and 10 Mpc.}
 	\label{fig:transphasespace}
 \end{figure}
-% \newgeometry{margin=0.25cm} % modify this if you need even more space
+% \newgeometry{margin=1.25in} % modify this if you need even more space
 \begin{landscape}
 \begin{figure}
-	\includegraphics[width=1.5\textwidth]{allplots.png}
+	\includegraphics[width=1.1\textwidth]{allplots.png}
 	\caption{Transient rate upper limits for our survey based on the 8-second, 15-minute and 4-hour observations, calculated using the simulations code of ~\citet{2022ascl.soft04007C}. The left three panels show the transient rate upper limits color coded as a function of peak flux and duration. The panel on the right shows the transient rate as a function of duration at a given flux of 5 mJy, for the three different types of observations in our survey. Note that the dip downwards in upper limits on the 8 second timescale at long transient durations (approximately 100 days) is due to false transient detections and should be ignored.}
 	\label{fig:threelimits}
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=1.5\textwidth]{diffplots.png}
+	\includegraphics[width=1\textwidth]{diffplots.png}
 	\caption{Difference in transient rate upper limits, calculated using the simulations code of ~\citet{2022ascl.soft04007C}, between the three different timescales of the survey. The left three panels show the differences between transient rate upper limits color coded as a function of flux and duration. The three right panels show this difference as a function of duration at a given flux of 5 mJy. The region that favors each timescale is noted by the corresponding color (red or blue) and the sign (positive or negative).}
 	\label{fig:threediff}
 \end{figure}
@@ -1214,48 +1240,72 @@ In the Observations section, we describe the observations used in the survey and
 
 \subsection{Observations}
 \label{sec:observations3}
-Deep observations were taken of short GRB and SN fields. Each observation was around 4 to 5 hours in length, not including calibration overheads, and the entire set of observations is summarized in Table~\ref{tab:allobs}. During the observations, the pointing of the telescope cycled between the target for approximately 15 minutes and a complex gain calibrator for about 5 minutes. In addition, a bandpass and flux calibrator was observed for several minutes. Both of these calibrators are also listed for each observation in this table.
-\newgeometry{margin=0.25cm} % modify this if you need even more space
+Deep observations were taken of short GRB and SN fields. Each observation was around 4 to 5 hours in length, not including calibration overheads, and the entire set of observations is summarized in Tables~\ref{tab:allobs3} and~\ref{tab:allobs3cals}. During the observations, the pointing of the telescope cycled between the target for approximately 15 minutes and a complex gain calibrator for about 5 minutes. In addition, a bandpass and flux calibrator was observed for several minutes. Both of these calibrators are also listed for each observation in this table.
+\newgeometry{margin=1.25in} % modify this if you need even more space
 \begin{landscape}
-\begin{deluxetable}{llrrrll}
-	\tablecolumns{7}
+\begin{deluxetable}{llrrr}
+	\tablecolumns{5}
 	\tablewidth{0pc}
-	\tablecaption{All observations used in this study, indicating the observations' start and end times, phase center position, time spent on the target, and calibrators used. \label{tab:allobs3}}
-	\tablehead{\colhead{Name} &  \colhead{Observation Time} &   \colhead{RA} &  \colhead{DEC} &    \colhead{Time On Target} &  \colhead{Bandpass} & \colhead{Complex Gain} \\ 
-	\colhead{} &  \colhead{(UT)} &   \colhead{(deg)} &  \colhead{(deg)} &    \colhead{(hrs)} &  \colhead{} & \colhead{} \\}
+	\tablecaption{All observations used in this study, indicating the observations' start and end times, phase center position, and time spent on the target. \label{tab:allobs3}}
+	\tablehead{\colhead{Name} &  \colhead{Observation Time} &   \colhead{RA} &  \colhead{DEC} &    \colhead{Time On Target} \\ 
+	\colhead{} &  \colhead{(UT)} &   \colhead{(deg)} &  \colhead{(deg)} &    \colhead{(hrs)}  \\}
 	\startdata
-  SN2019np & 2019-01-11 23:15:47.5 $-$ 2019-01-12 03:56:56.4 & 157.3415 &  29.5107 &                  3.22 & J1331+3030 &   J1120+1420 \\
-  SN2019np &  2019-03-10 19:50:15.6 $-$ 2019-03-11 00:13:8.9 & 157.3415 &  29.5107 &                  2.97 & J1331+3030 &   J1120+1420 \\
- SN2019muj & 2019-08-09 00:09:48.9 $-$ 2019-08-09 05:08:41.4 &  36.5771 &  -9.8359 &                  4.11 & J0408-6545 &   J0240-2309 \\
-  SN2020ue & 2020-01-14 01:43:23.7 $-$ 2020-01-14 06:12:48.9 & 190.6949 &   2.6595 &                  3.60 & J1939-6342 &   J1256-0547 \\
-  SN2020ue & 2020-01-19 23:14:52.5 $-$ 2020-01-20 03:46:49.6 & 190.6949 &   2.6595 &                  3.61 & J1939-6342 &   J1256-0547 \\
-  SN2020ue & 2020-02-06 00:55:23.8 $-$ 2020-02-06 05:28:24.9 & 190.6949 &   2.6595 &                  3.62 & J1939-6342 &   J1256-0547 \\
- SN2020hvf & 2020-04-24 15:44:50.4 $-$ 2020-04-24 21:22:13.9 & 170.3602 &   3.0147 &                  4.98 & J0408-6545 &   J1058+0133 \\
- SN2020hvf &  2020-05-01 17:15:5.2 $-$ 2020-05-01 22:50:12.7 & 170.3602 &   3.0147 &                  4.97 & J0408-6545 &   J1058+0133 \\
- SN2021smj & 2021-07-10 12:45:57.1 $-$ 2021-07-10 18:51:27.9 & 186.6940 &   8.8827 &                  4.95 & J0408-6545 &   J1150-0023 \\
- SN2021smj & 2021-07-23 11:50:54.9 $-$ 2021-07-23 17:57:13.6 & 186.6940 &   8.8827 &                  4.95 & J0408-6545 &   J1150-0023 \\
- SN2021qvv &   2021-08-09 11:07:9.8 $-$ 2021-08-09 15:48:2.6 & 187.0122 &   9.8056 &                  3.96 & J0408-6545 &   J1150-0023 \\
- SN2021smj &  2021-09-05 08:41:42.0 $-$ 2021-09-05 14:48:8.7 & 186.6940 &   8.8827 &                  4.95 & J0408-6545 &   J1150-0023 \\
- SN2022ffv &  2022-03-31 09:22:5.0 $-$ 2022-03-31 15:01:52.3 &  54.1238 & -35.2893 &                  4.97 & J0408-6545 &   J0440-4333 \\
- SN2022ffv & 2022-04-01 09:29:45.1 $-$ 2022-04-01 17:21:37.1 &  54.1238 & -35.2893 &                  4.97 & J0408-6545 &   J0440-4333 \\
- SN2022ffv &  2022-04-14 08:22:1.1 $-$ 2022-04-14 14:01:48.5 &  54.1238 & -35.2893 &                  4.98 & J0408-6545 &   J0440-4333 \\
-GRB220730A &  2022-08-01 18:36:8.7 $-$ 2022-08-01 22:40:46.5 & 225.0143 & -69.4959 &                  3.46 & J1939-6342 &   J1619-8418 \\
-GRB220730A & 2022-08-03 16:30:46.1 $-$ 2022-08-03 20:36:27.8 & 225.0143 & -69.4959 &                  3.47 & J1939-6342 &   J1619-8418 \\
-GRB220730A & 2022-08-10 15:15:52.6 $-$ 2022-08-10 19:22:14.4 & 225.0143 & -69.4959 &                  3.47 & J1939-6342 &   J1619-8418 \\
-GRB200522A &  2022-08-16 23:22:42.4 $-$ 2022-08-17 03:23:4.3 &   5.6820 &  -0.2832 &                  3.47 & J1939-6342 &   J0022+0014 \\
-GRB200907B & 2022-08-19 05:18:50.2 $-$ 2022-08-19 09:23:44.0 &  89.0290 &   6.9062 &                  3.47 & J0408-6545 &   J0521+1638 \\
-GRB210919A &   2022-08-20 05:17:2.6 $-$ 2022-08-20 09:19:8.5 &  80.2545 &   1.3115 &                  3.46 & J0408-6545 &   J0503+0203 \\
-GRB210726A &  2022-08-21 11:26:1.1 $-$ 2022-08-21 15:29:43.0 & 193.2909 &  19.1875 &                  3.46 & J1331+3030 &   J1330+2509 \\
-GRB200411A & 2022-08-22 02:16:28.7 $-$ 2022-08-22 06:03:30.9 &  47.6641 & -52.3176 &                  3.22 & J0408-6545 &   J0210-5101 \\
-GRB210323A & 2022-08-23 20:17:47.4 $-$ 2022-08-24 00:23:13.2 & 317.9461 &  25.3699 &                  3.47 & J1939-6342 &   J2236+2828 \\
-GRB200219A & 2022-08-24 00:47:39.5 $-$ 2022-08-24 04:52:25.3 & 342.6385 & -59.1196 &                  3.46 & J0408-6545 &   J2329-4730 \\
-GRB220730A & 2022-09-08 15:37:10.1 $-$ 2022-09-08 19:42:19.8 & 225.0143 & -69.4959 &                  3.46 & J1939-6342 &   J1619-8418 \\
- SN2020eyj & 2022-05-07 16:10:32.8 $-$ 2022-05-07 21:05:17.3 & 167.9466 &  29.3893 &                  3.96 & J1120+1420 &   J0408-6545 \\
- SN2020eyj &  2022-10-28 04:47:5.0 $-$ 2022-10-28 09:42:45.5 & 167.9466 &  29.3893 &                  3.97 & J1120+1420 &   J0408-6545 \\
+  SN2019np & 2019-01-11 23:15:47.5 $-$ 2019-01-12 03:56:56.4 & 157.3415 &  29.5107 &                  3.22 \\
+  SN2019np &  2019-03-10 19:50:15.6 $-$ 2019-03-11 00:13:8.9 & 157.3415 &  29.5107 &                  2.97 \\
+ SN2019muj & 2019-08-09 00:09:48.9 $-$ 2019-08-09 05:08:41.4 &  36.5771 &  -9.8359 &                  4.11 \\
+  SN2020ue & 2020-01-14 01:43:23.7 $-$ 2020-01-14 06:12:48.9 & 190.6949 &   2.6595 &                  3.60 \\
+  SN2020ue & 2020-01-19 23:14:52.5 $-$ 2020-01-20 03:46:49.6 & 190.6949 &   2.6595 &                  3.61 \\
+  SN2020ue & 2020-02-06 00:55:23.8 $-$ 2020-02-06 05:28:24.9 & 190.6949 &   2.6595 &                  3.62 \\
+ SN2020hvf & 2020-04-24 15:44:50.4 $-$ 2020-04-24 21:22:13.9 & 170.3602 &   3.0147 &                  4.98 \\
+ SN2020hvf &  2020-05-01 17:15:5.2 $-$ 2020-05-01 22:50:12.7 & 170.3602 &   3.0147 &                  4.97 \\
+ SN2021smj & 2021-07-10 12:45:57.1 $-$ 2021-07-10 18:51:27.9 & 186.6940 &   8.8827 &                  4.95 \\
+ SN2021smj & 2021-07-23 11:50:54.9 $-$ 2021-07-23 17:57:13.6 & 186.6940 &   8.8827 &                  4.95 \\
+ SN2021qvv &   2021-08-09 11:07:9.8 $-$ 2021-08-09 15:48:2.6 & 187.0122 &   9.8056 &                  3.96 \\
+ SN2021smj &  2021-09-05 08:41:42.0 $-$ 2021-09-05 14:48:8.7 & 186.6940 &   8.8827 &                  4.95 \\
+ SN2022ffv &  2022-03-31 09:22:5.0 $-$ 2022-03-31 15:01:52.3 &  54.1238 & -35.2893 &                  4.97 \\
+ SN2022ffv & 2022-04-01 09:29:45.1 $-$ 2022-04-01 17:21:37.1 &  54.1238 & -35.2893 &                  4.97 \\
+ SN2022ffv &  2022-04-14 08:22:1.1 $-$ 2022-04-14 14:01:48.5 &  54.1238 & -35.2893 &                  4.98 \\
+GRB220730A &  2022-08-01 18:36:8.7 $-$ 2022-08-01 22:40:46.5 & 225.0143 & -69.4959 &                  3.46 \\
+GRB220730A & 2022-08-03 16:30:46.1 $-$ 2022-08-03 20:36:27.8 & 225.0143 & -69.4959 &                  3.47 \\
+GRB220730A & 2022-08-10 15:15:52.6 $-$ 2022-08-10 19:22:14.4 & 225.0143 & -69.4959 &                  3.47 \\
+GRB200522A &  2022-08-16 23:22:42.4 $-$ 2022-08-17 03:23:4.3 &   5.6820 &  -0.2832 &                  3.47 \\
+GRB200907B & 2022-08-19 05:18:50.2 $-$ 2022-08-19 09:23:44.0 &  89.0290 &   6.9062 &                  3.47 \\
+GRB210919A &   2022-08-20 05:17:2.6 $-$ 2022-08-20 09:19:8.5 &  80.2545 &   1.3115 &                  3.46 \\
+GRB210726A &  2022-08-21 11:26:1.1 $-$ 2022-08-21 15:29:43.0 & 193.2909 &  19.1875 &                  3.46 \\
+GRB200411A & 2022-08-22 02:16:28.7 $-$ 2022-08-22 06:03:30.9 &  47.6641 & -52.3176 &                  3.22 \\
+GRB210323A & 2022-08-23 20:17:47.4 $-$ 2022-08-24 00:23:13.2 & 317.9461 &  25.3699 &                  3.47 \\
+GRB200219A & 2022-08-24 00:47:39.5 $-$ 2022-08-24 04:52:25.3 & 342.6385 & -59.1196 &                  3.46 \\
+GRB220730A & 2022-09-08 15:37:10.1 $-$ 2022-09-08 19:42:19.8 & 225.0143 & -69.4959 &                  3.46 \\
+ SN2020eyj & 2022-05-07 16:10:32.8 $-$ 2022-05-07 21:05:17.3 & 167.9466 &  29.3893 &                  3.96 \\
+ SN2020eyj &  2022-10-28 04:47:5.0 $-$ 2022-10-28 09:42:45.5 & 167.9466 &  29.3893 &                  3.97 \\
 	\enddata
 \end{deluxetable}
-
 \end{landscape}
+\begin{deluxetable}{lll}
+	\tablecolumns{3}
+	\tablewidth{0pc}
+	\tablecaption{A table showing the calibrators used for each field in the study. \label{tab:allobs3cals}}
+	\tablehead{\colhead{Name}  \colhead{Bandpass} & \colhead{Complex Gain} }
+	\startdata
+    SN2019np  &J1331+3030 &   J1120+1420 \\
+  SN2019muj  &J0408-6545 &   J0240-2309 \\
+   SN2020ue  &J1939-6342 &   J1256-0547 \\
+  SN2020hvf  &J0408-6545 &   J1058+0133 \\
+  SN2021smj  &J0408-6545 &   J1150-0023 \\
+  SN2022ffv  &J0408-6545 &   J0440-4333 \\
+ GRB220730A  &J1939-6342 &   J1619-8418 \\
+ GRB200522A  &J1939-6342 &   J0022+0014 \\
+ GRB200907B  &J0408-6545 &   J0521+1638 \\
+ GRB210919A  &J0408-6545 &   J0503+0203 \\
+ GRB210726A  &J1331+3030 &   J1330+2509 \\
+ GRB200411A  &J0408-6545 &   J0210-5101 \\
+ GRB210323A  &J1939-6342 &   J2236+2828 \\
+ GRB200219A  &J0408-6545 &   J2329-4730 \\
+ GRB220730A  &J1939-6342 &   J1619-8418 \\
+  SN2020eyj  &J1120+1420 &   J0408-6545 \\
+ 	\enddata
+\end{deluxetable}
+
 \restoregeometry
  \doublespacing
 Almost all observations were calibrated using version 2.0 of the ProcessMeerKAT pipeline, with the exception of the GRB~220730A observations that were processed using version 1.1 of the pipeline~\citep[{\sc ProcessMeerKAT};][]{pminprep}. As part of the calibration process, parts of the spectrum known to be heavily contaminated with radio frequency interference (RFI) were flagged, resulting in a bandwidth of approximately 800 MHz centered at 1.3~GHz. Calibration was performed in parallel over 9 spectral windows (11 for ProcessMeerKAT 1.1). Common Astronomy Software Applications~\citep[{\sc CASA;}][]{2022arXiv221002276T} tools were used to perform complex gain and flux calibration, along with flagging for RFI, using the tasks tfcrop and rflag. After two rounds of calibration and flagging, the spectral windows were recombined into a single measurement set for imaging.
@@ -1323,7 +1373,7 @@ Our measurements from MeerKAT at 1.3~GHz agree fairly well with the catalog meas
 
 Source 1278651 had no counterparts in other radio surveys. The non-detection in VLASS is particularly notable, since the limits given in Table~\ref{tab:radiocounterparts} are around a factor of three lower than our measurements at 1.3~GHz (see also Figure~\ref{fig:src1278651multi}). This could be due to variability in the time between observations; a steep spectral index of the source between 1.3 and 3~GHz; or, given that this source is around 0.77 degrees from the center of the image, issues with the primary beam correction resulting in the flux being overcorrected.
 
-\newgeometry{margin=0.25cm} % modify this if you need even more space
+\newgeometry{margin=1.25in} % modify this if you need even more space
 \begin{landscape}
 \begin{deluxetable}{llllllll}
 	\tablecolumns{8}
@@ -1528,8 +1578,8 @@ More radio detections of short GRB afterglows are needed to better understand th
 \begin{deluxetable}{lllclll}
 	\tablecolumns{7}
 	\tablewidth{0pc}
-	\tablecaption{A summary of all observations taken, forced measurements at the GRB afterglow location, and rms noise. \label{tab:observations}}
-	\tablehead{ \colhead{GRB} & \colhead{RA} & \colhead {Dec} & \colhead{$\Delta T$ Post-Trigger} &        \colhead{RMS}  & \colhead{$F_{int}$} & \colhead{$F_{pk}$}\\
+	\tablecaption{A summary of all observations taken, forced measurements at the GRB afterglow location, and rms noise. $\Delta T$ is the time elapsed since the GRB trigger.\label{tab:observations}}
+	\tablehead{ \colhead{GRB} & \colhead{RA} & \colhead {Dec} & \colhead{$\Delta T$} &        \colhead{RMS}  & \colhead{$F_{int}$} & \colhead{$F_{pk}$}\\
 		\colhead{} & \colhead{(deg)}  & \colhead{(deg)} & \colhead{(days)} &        \colhead{($\mu$Jy) } &        \colhead{($\mu$Jy) } }
 	\startdata
 GRB200219A & 342.6384 & -59.1196 &   0.30 &  9 &   $31 \pm 13$ &      $29 \pm 7$ \\
@@ -1613,7 +1663,7 @@ We use our deep MeerKAT observations to constrain some of the physical parameter
 We model our MeerKAT observations by comparing the $3\sigma$ upper limits to the theoretical expectations of peaks in radio light curves and spectral energy distributions \citep{2017MNRAS.472.3161B,2023MNRAS.518.1522D}. For every observation, we can consider the measured upper limit to be a limit on the theoretical peak flux if it would be at that time and frequency. Given the quasi-logarithmic spacing of our observations, similar flux limits at various times for a given GRB, and the power-law flux evolution of GRB afterglows, it is very unlikely that we would have missed any radio peak in the gaps between our observations, except possibly for the observations between a few weeks and one or two years after the GRB. 
 
 For every observation we calculate the $\Psi$ parameter from \citet{2017MNRAS.472.3161B} and \citet{2023MNRAS.518.1522D}, which uses the observing frequency, observation time, peak flux (for which we use the $3\sigma$ upper limits), redshift, luminosity distance, and isotropic-equivalent gamma-ray energy. We show the redshift and gamma-ray energy values used, and their references, in Table~\ref{tab:GRBprops}. For the two GRBs without a known redshift, we use the average redshift of the other 5 GRBs. The luminosity distance of each GRB was calculated using \citet{2006PASP..118.1711W}. The upper limits on the peak flux result in lower limits on the $\Psi$ parameter, which are shown in Table~\ref{tab:psiobs}. We also show a histogram of the lower limits on $\Psi$ in Figure~\ref{fig:psiobshist}. We note that we are using the $\Psi$ equations for a homogeneous medium, since that is the typically assumed environment of a short GRB (rather than a massive stellar wind, which one may expect for long GRBs). This distribution of lower limits on $\Psi$ can be compared to the distribution of measured $\Psi$ values for a large sample of long GRBs \citep{2023MNRAS.518.1522D}, and the implications of this are discussed in the next section.
-\newgeometry{margin=0.25cm} % modify this if you need even more space
+\newgeometry{margin=1.25in} % modify this if you need even more space
 \begin{landscape}
 \begin{deluxetable}{lllll}
 	\tablecolumns{5}
@@ -1873,18 +1923,18 @@ Even though the transient rate simulations presented in Chapter~2 are much more 
 
 
 \doublespacing
-\appendix
+% \appendix
 
 
-\section{Appendix: Publication Agreement}\label{appendixlabel}
-\includepdf[pages={1-},scale=0.8]{elsevierpubagree.pdf}
-% Figure \ref{fig:snr_pipeline} is an example figure.
-% \begin{figure}[htb!]
-%    \centering
-%    \includegraphics[width=\textwidth]{SNR_pipeline.png}
-%    \caption{Example figure}
-%    \label{fig:snr_pipeline}
-% \end{figure}
+% \section{Appendix: Publication Agreement}\label{appendixlabel}
+% \includepdf[pages={1-},scale=0.8]{elsevierpubagree.pdf}
+% % Figure \ref{fig:snr_pipeline} is an example figure.
+% % \begin{figure}[htb!]
+% %    \centering
+% %    \includegraphics[width=\textwidth]{SNR_pipeline.png}
+% %    \caption{Example figure}
+% %    \label{fig:snr_pipeline}
+% % \end{figure}
 
 
 \end{document}
